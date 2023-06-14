@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace MAUI_Bug_Reproduce_CarouselWithImageTemplate;
+﻿namespace MAUI_Bug_Reproduce_CarouselWithImageTemplate;
 
 internal class MainViewModel
 {
