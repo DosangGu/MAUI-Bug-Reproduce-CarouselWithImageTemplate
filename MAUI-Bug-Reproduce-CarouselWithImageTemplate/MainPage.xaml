@@ -18,8 +18,8 @@
                     <LinearItemsLayout Orientation="Horizontal" SnapPointsType="MandatorySingle" SnapPointsAlignment="Start"/>
                 </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <Image Aspect="AspectFill" Source="{Binding .}"/>
+                    <DataTemplate x:DataType="local:ImageClass">
+                        <Image Aspect="AspectFill" Source="{Binding SourcePath}"/>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>

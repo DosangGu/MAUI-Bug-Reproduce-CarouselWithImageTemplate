@@ -2,12 +2,22 @@
 
 internal class MainViewModel
 {
-    public IReadOnlyList<string> Images { get; } = new List<string>() { "dotnet_bot", "dotnet_bot", "dotnet_bot" };
+    public IReadOnlyList<ImageClass> Images { get; } = new List<ImageClass>()
+    {
+        new ImageClass {SourcePath  = "dotnet_bot" },
+        new ImageClass {SourcePath  = "dotnet_bot" },
+        new ImageClass {SourcePath  = "dotnet_bot" },
+    };
 
     public string ImageOne { get; } = "dotnet_bot";
 
     public MainViewModel()
     {
-
     }
+}
+
+
+public record ImageClass
+{
+    public string SourcePath { get; set; }
 }
