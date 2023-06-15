@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using de.level28.MmImageLoading;
 
 namespace MAUI_Bug_Reproduce_CarouselWithImageTemplate;
 
@@ -16,6 +17,9 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddTransient<MainViewModel>();
+# if IOS || ANDROID
+		builder.UseMmImageLoading();
+#endif
 
 #if DEBUG
 		builder.Logging.AddDebug();

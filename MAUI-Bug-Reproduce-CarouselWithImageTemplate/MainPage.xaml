@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:MAUI_Bug_Reproduce_CarouselWithImageTemplate"
              x:Class="MAUI_Bug_Reproduce_CarouselWithImageTemplate.MainPage"
              x:DataType="local:MainViewModel"
+             xmlns:mm="clr-namespace:MmImageLoading.MAUI;assembly=de.level28.MmImageLoading.NuGet"
              >
     <ContentPage.BindingContext>
         <local:MainViewModel/>
@@ -19,7 +20,7 @@
                 </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Image Aspect="AspectFill" Source="{Binding .}"/>
+                        <mm:CachedImage Source="{Binding .}" Aspect="AspectFill"/>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
